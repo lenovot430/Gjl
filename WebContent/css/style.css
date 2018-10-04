@@ -1,0 +1,41 @@
+em{
+	color:red;
+	font-weight: bold;	
+}
+
+.table{
+	border-collapse: collapse;
+}
+
+.table th{
+	text-align: right;
+	border:solid 1px #DCE7F5;
+}
+
+.table td{
+	padding-left:5px;
+	border:solid 1px #DCE7F5;
+}
+
+.grid{
+	width:98%;
+	border-collapse: collapse;	
+}
+
+.grid th{
+	border:solid 1px orange;
+	background-color:#EDF8FE;
+	text-align:center;
+	color:#EDF8FE;
+}
+
+.grid td{
+	border:solid 1px orange;	
+}
+
+.search{
+	border:solid 1px #EDF8FE;
+	background-color:#F8F8F9;
+	width:98%;
+	padding: 10px;
+}

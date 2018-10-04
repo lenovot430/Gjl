@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="cn.hl.mapper.DepartmentMapper">
+	
+	<!-- 增加信息 -->
+	<insert id="add" parameterType="cn.hl.pojo.Department">
+		insert into sys_department
+			values(default,#{deptName},#{note})
+	</insert>
+	
+	<!-- 按照Id删除信息 -->
+	<delete id="delete" parameterType="int">
+		delete from sys_department
+			where deptId=#{deptId} 
+	</delete>
+	
+	<!-- 按照Id更新信息 -->
+	<update id="update" parameterType="cn.hl.pojo.Department">
+		update sys_department set deptName=#{deptName},note=#{note}
+			where deptId=#{deptId}
+	</update>
+	
+	<!-- 按照Id查询信息 -->
+	<select id="getById" parameterType="int" resultType="cn.hl.pojo.Department">
+		select * from sys_department
+			where deptId=#{deptId}
+	</select>
+		
+	<!-- 查询所有信息 -->	
+	<select id="getAll" resultType="cn.hl.pojo.Department">
+		select * from
+			 sys_department
+			 	order by deptId
+	</select>
+	
+	<!-- 按照部门名称进行查询 -->
+	<select id="getByExp" parameterType="String" resultType="cn.hl.pojo.Department">
+		select*from sys_Department
+			where deptName like #{deptName}
+				order by deptId
+	</select>
+		
+		
+		
+	</mapper>
